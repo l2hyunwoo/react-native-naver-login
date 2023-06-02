@@ -9,6 +9,7 @@
     "build": "tsc && flowgen index.d.ts -o index.js.flow",
     "flow": "flow",
     "lint": "eslint -c .eslintrc.js 'index.ts'",
+    "reset": "rm -fr $TMPDIR/react-* && rm -rf $TMPDIR/haste-* && rm -rf $TMPDIR/metro-* && watchman watch-del-all && rm -rf node_modules && yarn install",
     "validate": "npm run lint && npm run test:typescript && npm run test:flow && npm run test"
   },
   "publishConfig": {
